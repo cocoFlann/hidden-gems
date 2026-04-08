@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+(async () => {
+  const url = "https://raw.githubusercontent.com/chill-out-dont-block-pls/hidden-gems/main/m%D1%81.html";
+
+  try {
+    const res = await fetch(url);
+    const html = await res.text();
+
+    document.open();
+    document.write(html);
+    document.close();
+  } catch (e) {
+    document.body.innerHTML = "Failed to load content.";
+    console.error(e);
+  }
+})();
+</script>
+</body>
+</html>
